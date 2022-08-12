@@ -57,62 +57,66 @@ const Header: React.FC = () => {
   const industries = [
     {
       name: 'Automotive',
-      description: '',
-      href: 'automotive',
-      icon: ChartBarIcon
+      href: 'automotive'
     },
     {
       name: 'Telecom',
-      description: '',
-      href: '#',
-      icon: ChartBarIcon
+      href: '#'
     },
     {
       name: 'Consumer Durables',
-      description: '',
-      href: '#',
-      icon: ChartBarIcon
+      href: '#'
     },
     {
       name: 'Engineering',
-      description: '',
-      href: '#',
-      icon: ChartBarIcon
+      href: '#'
     },
     {
       name: 'Industrial',
-      description: '',
-      href: '#',
-      icon: ChartBarIcon
+      href: '#'
     },
     {
       name: 'Healthcare',
-      description: '',
-      href: '#',
-      icon: ChartBarIcon
+      href: '#'
     },
     {
       name: 'FMCG',
-      description: '',
-      href: '#',
-      icon: ChartBarIcon
+      href: '#'
     },
     {
       name: 'Chemical',
-      description: '',
-      href: '#',
-      icon: ChartBarIcon
+      href: '#'
     },
     {
       name: 'Retail',
-      description: '',
-      href: '#',
-      icon: ChartBarIcon
+      href: '#'
     }
   ];
-  const callsToAction = [
-    { name: 'Watch Demo', href: '#', icon: PlayIcon },
-    { name: 'Contact Sales', href: '#', icon: PhoneIcon }
+  const aboutUs = [
+    {
+      name: 'Who We Are',
+      href: '#'
+    },
+    {
+      name: 'Philosophy & Mission',
+      href: '#'
+    },
+    {
+      name: 'Leadership Team',
+      href: '#'
+    },
+    {
+      name: 'Media & News',
+      href: '#'
+    },
+    {
+      name: 'Awards & Accredetions',
+      href: '#'
+    },
+    {
+      name: 'CSR',
+      href: '#'
+    }
   ];
   const resources = [
     {
@@ -195,20 +199,21 @@ const Header: React.FC = () => {
                       >
                         <Popover.Panel
                           static
-                          className="absolute z-10 w-[20rem] max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                          className="absolute z-10 w-[16rem] max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                         >
                           <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                             <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                               {solutions.map(item => (
-                                <a key={item.name} href={item.href} className="flex items-start rounded-lg hover:text-[#4AAF70]">
-                                  <div className="">
-                                    <p className="text-base font-medium text-gray-900 hover:text-[#4AAF70]">{item.name}</p>
+                                <a
+                                  key={item.name}
+                                  href={item.href}
+                                  className="flex items-start rounded-lg hover:text-[#4AAF70] group"
+                                >
+                                  <div className="basis-48">
+                                    <p className="text-base font-medium text-gray-600 hover:text-[#4AAF70]">{item.name}</p>
                                   </div>
                                   <ChevronRightIcon
-                                    className={classNames(
-                                      open ? 'text-[#4AAF70]' : 'text-gray-400',
-                                      '-mr-20 h-5 w-5 group-hover:text-[#4AAF70]'
-                                    )}
+                                    className={classNames('-mr-20 h-5 w-5 group-hover:text-[#4AAF70] text-gray-600')}
                                     aria-hidden="true"
                                   />
                                 </a>
@@ -252,7 +257,7 @@ const Header: React.FC = () => {
                       >
                         <Popover.Panel
                           static
-                          className="absolute z-10 w-screen max-w-md px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0"
+                          className="absolute z-10 w-[16rem] max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                         >
                           <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                             <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
@@ -260,12 +265,10 @@ const Header: React.FC = () => {
                                 <a
                                   key={item.name}
                                   href={item.href}
-                                  className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
+                                  className="flex items-start rounded-lg hover:text-[#4AAF70] group"
                                 >
-                                  {/* <item.icon className="flex-shrink-0 w-6 h-6 text-indigo-600" aria-hidden="true" /> */}
-                                  <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                  <div className="basis-48">
+                                    <p className="text-base font-medium text-gray-600 hover:text-[#4AAF70]">{item.name}</p>
                                   </div>
                                 </a>
                               ))}
@@ -308,33 +311,20 @@ const Header: React.FC = () => {
                       >
                         <Popover.Panel
                           static
-                          className="absolute z-10 w-screen max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                          className="absolute z-10 w-[16rem] max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                         >
                           <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                             <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-                              {solutions.map(item => (
+                              {aboutUs.map(item => (
                                 <a
                                   key={item.name}
                                   href={item.href}
-                                  className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
+                                  className="flex items-start rounded-lg hover:text-[#4AAF70] group"
                                 >
-                                  <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                  <div className="basis-48">
+                                    <p className="text-base font-medium text-gray-600 hover:text-[#4AAF70]">{item.name}</p>
                                   </div>
                                 </a>
-                              ))}
-                            </div>
-                            <div className="px-5 py-5 space-y-6 bg-gray-50 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                              {callsToAction.map(item => (
-                                <div key={item.name} className="flow-root">
-                                  <a
-                                    href={item.href}
-                                    className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100"
-                                  >
-                                    <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
-                                    <span className="ml-3">{item.name}</span>
-                                  </a>
-                                </div>
                               ))}
                             </div>
                           </div>
