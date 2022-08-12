@@ -344,7 +344,7 @@ const Header: React.FC = () => {
                   )}
                 </Popover>
 
-                <a href="www.amsainfotech.com" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
                   Careers
                 </a>
                 <Link className="text-base font-medium text-gray-500 hover:text-gray-900" to="/contact">
@@ -409,11 +409,11 @@ const Header: React.FC = () => {
                 </div>
                 <div className="px-5 py-6 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <a href="www.amsainfotech.com" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                       Pricing
                     </a>
 
-                    <a href="www.amsainfotech.com" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                       Docs
                     </a>
                     {resources.map(item => (
@@ -424,14 +424,14 @@ const Header: React.FC = () => {
                   </div>
                   <div>
                     <a
-                      href="www.amsainfotech.com"
+                      href="#"
                       className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
                     >
                       Sign up
                     </a>
                     <p className="mt-6 text-base font-medium text-center text-gray-500">
                       Existing customer?{' '}
-                      <a href="www.amsainfotech.com" className="text-indigo-600 hover:text-indigo-500">
+                      <a href="#" className="text-indigo-600 hover:text-indigo-500">
                         Sign in
                       </a>
                     </p>

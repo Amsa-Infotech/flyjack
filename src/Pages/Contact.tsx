@@ -1,5 +1,6 @@
 import { SocketAddress } from 'net';
-import banner from '../assets/images/gf-banner.png';
+import banner from '../assets/images/contact-image1.png';
+import banner2 from '../assets/images/contact-image2.png';
 
 const Contact = () => {
   const offices = [
@@ -186,6 +187,7 @@ const Contact = () => {
           </div>
         </section>
       </div>
+      <img src={banner2} className="w-full" alt="" />
     </div>
   );
 };
