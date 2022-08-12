@@ -9,10 +9,73 @@ import image3 from '../assets/images/gf-image5.png';
 import image5 from '../assets/images/consumer_durable.jpg';
 import image6 from '../assets/images/automotive-image4.png';
 import image7 from '../assets/images/csr_1.jpg';
+import banner1 from '../assets/banners/global_network_2.jpg';
+import banner2 from '../assets/banners/integrated_logistic_1.jpg';
+import banner3 from '../assets/banners/logisteed_3.jpg';
+import banner4 from '../assets/banners/taking_future_4.jpg';
+
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { CSSProperties } from 'react';
 
 const home = () => {
+  const indicatorStyles: CSSProperties = {
+    background: '#ccc',
+    width: 30,
+    height: 3,
+    display: 'inline-block',
+    margin: '0 8px'
+  };
+
   return (
     <div>
+      <Carousel
+        axis="horizontal"
+        showStatus={false}
+        showThumbs={false}
+        renderIndicator={(onClickHandler, isSelected, index, label) => {
+          if (isSelected) {
+            return (
+              <li
+                style={{ ...indicatorStyles, background: '#fff' }}
+                aria-label={`Selected: ${label} ${index + 1}`}
+                title={`Selected: ${label} ${index + 1}`}
+              />
+            );
+          }
+          return (
+            <li
+              style={indicatorStyles}
+              onClick={onClickHandler}
+              onKeyDown={onClickHandler}
+              value={index}
+              key={index}
+              role="button"
+              tabIndex={0}
+              title={`${label} ${index + 1}`}
+              aria-label={`${label} ${index + 1}`}
+            />
+          );
+        }}
+      >
+        <div>
+          <img className="relative" src={banner1} alt="" />
+          <div className="absolute pl-10 text-6xl font-bold text-white left-10 top-1/2">
+            <p>Global Network</p>
+            <p>and Presence</p>
+          </div>
+        </div>
+        <div>
+          <img src={banner2} alt="" />
+        </div>
+        <div>
+          <img src={banner3} alt="" />
+        </div>
+        <div>
+          <img src={banner4} alt="" />
+        </div>
+      </Carousel>
+
       <div className="relative max-w-[50rem] mx-auto items-center pt-10">
         <img src={logo} alt="" />
       </div>

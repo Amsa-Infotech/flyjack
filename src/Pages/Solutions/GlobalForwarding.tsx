@@ -176,13 +176,13 @@ const GlobalForwarding = () => {
           </button>
         </div>
       </section>
-      {/* other industry section */}
-      <section id="other-industry" className="mx-auto bg-white max-w-[90rem]">
+      {/* other solutions section */}
+      <section id="other-solution" className="mx-auto bg-white max-w-[75rem]">
         <div className="text-center">
           <div className="py-12 text-4xl text-[#4AAF70] uppercase">
             Other <span className="font-bold">Solutions</span>
           </div>
-          <div className="grid grid-cols-3 gap-x-0">
+          <div className="grid grid-cols-3 gap-6">
             <div className="">
               <img src={image4} alt="" className="" />
             </div>
