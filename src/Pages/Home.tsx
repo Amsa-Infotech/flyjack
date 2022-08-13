@@ -60,7 +60,7 @@ const home = () => {
       >
         <div>
           <img src={banner3} className="h-[40rem] " alt="" />
-          <div className="absolute font-bold text-black left-[90rem] pt-10 top-32">
+          <div className="absolute font-bold text-black md:left-[50rem]  pt-10 top-32">
             <p className="text-2xl left-[20rem] pl-10">Toward New Dimensions</p>
             <p className="text-5xl left-[20rem] py-10 ">LOGISTEED</p>
             <p className="text-2xl w-[30rem] pl-40">
