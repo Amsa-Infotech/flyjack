@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment } from 'react';
+import React, { Fragment, useRef, useState } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import logo from '../../assets/images/logo.png';
 import {
@@ -139,15 +139,14 @@ const Header: React.FC = () => {
     },
     { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon }
   ];
-  const recentPosts = [
-    { id: 1, name: 'Boost your conversion rate', href: '#' },
-    { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-    { id: 3, name: 'Improve your customer experience', href: '#' }
-  ];
 
   function classNames(...classes: any) {
     return classes.filter(Boolean).join(' ');
   }
+
+  const [openSubmenu, setSubmenuState] = useState<boolean>(false);
+
+  // setSubmenuState(openSubmenu => !openSubmenu);
 
   // export default function Header() {
   return (
@@ -204,10 +203,10 @@ const Header: React.FC = () => {
                           <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                             <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                               {solutions.map(item => (
-                                <a
+                                <button
                                   key={item.name}
-                                  href={item.href}
-                                  className="flex items-start rounded-lg hover:text-[#4AAF70] group"
+                                  className="relative flex items-start rounded-lg hover:text-[#4AAF70] group"
+                                  onMouseEnter={() => setSubmenuState(true)}
                                 >
                                   <div className="basis-48">
                                     <p className="text-base font-medium text-gray-600 hover:text-[#4AAF70]">{item.name}</p>
@@ -216,7 +215,17 @@ const Header: React.FC = () => {
                                     className={classNames('-mr-20 h-5 w-5 group-hover:text-[#4AAF70] text-gray-600')}
                                     aria-hidden="true"
                                   />
-                                </a>
+                                  <Transition>
+                                    <Popover.Panel
+                                      static
+                                      className="absolute block z-20 w-[16rem]  px-20 mt-3 ml-[12rem] transform sm:px-0 lg:left-1/2 lg:-translate-x-1/2"
+                                    >
+                                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                        <div className="grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">amruta</div>
+                                      </div>
+                                    </Popover.Panel>
+                                  </Transition>
+                                </button>
                               ))}
                             </div>
                           </div>
@@ -231,20 +240,19 @@ const Header: React.FC = () => {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? 'text-gray-900' : 'text-gray-500',
+                          open ? 'text-[#4AAF70]' : 'text-gray-500',
                           'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                         )}
                       >
                         <span>Industry</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? 'text-gray-600' : 'text-gray-400',
+                            open ? 'text-[#4AAF70]' : 'text-gray-400',
                             'ml-2 h-5 w-5 group-hover:text-gray-500'
                           )}
                           aria-hidden="true"
                         />
                       </Popover.Button>
-
                       <Transition
                         show={open}
                         as={Fragment}

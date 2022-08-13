@@ -59,20 +59,32 @@ const home = () => {
         }}
       >
         <div>
-          <img className="relative" src={banner1} alt="" />
+          <img src={banner3} className="h-[40rem] " alt="" />
+          <div className="absolute font-bold text-black left-[90rem] pt-10 top-32">
+            <p className="text-2xl left-[20rem] pl-10">Toward New Dimensions</p>
+            <p className="text-5xl left-[20rem] py-10 ">LOGISTEED</p>
+            <p className="text-2xl w-[30rem] pl-40">
+              <span className="">LOGISTEED </span>is a word that combines Logistics with exceed. proceed, succeed and speed
+            </p>
+          </div>
+        </div>
+        <div>
+          <img className="relative h-[40rem]" src={banner1} alt="" />
           <div className="absolute pl-10 text-6xl font-bold text-white left-10 top-1/2">
             <p>Global Network</p>
             <p>and Presence</p>
           </div>
         </div>
         <div>
-          <img src={banner2} alt="" />
+          <img src={banner2} alt="" className="relative h-[40rem]" />
+          <div className="absolute pl-10 text-5xl font-bold text-black left-10 top-1/2">
+            <p>Integrated Logistics</p>
+            <p>Solutions Partner</p>
+          </div>
         </div>
+
         <div>
-          <img src={banner3} alt="" />
-        </div>
-        <div>
-          <img src={banner4} alt="" />
+          <img src={banner4} alt="" className="h-[40rem]" />
         </div>
       </Carousel>
 
