@@ -59,32 +59,37 @@ const home = () => {
         }}
       >
         <div>
+          <img src={banner4} alt="" className="relative h-[30rem]" />
+          <div className="absolute pl-20 text-white top-[18rem]">
+            <p>Amid various technological breakthroughs and an increasing diversification </p>
+            <p> of services, procedures, and values in society, Hitachi Transport System and</p>
+            <p>FLYJAC will attempt to expand our collaborative efforts across businesses </p>
+            <p>and industries to achieve new innovations.</p>
+          </div>
+        </div>
+        <div>
           <img src={banner3} className="h-[30rem] " alt="" />
-          <div className="absolute font-bold text-black md:left-[50rem] pt-10 top-32">
-            <p className="text-2xl left-[20rem] pl-10">Toward New Dimensions</p>
-            <p className="text-5xl left-[20rem] py-10 ">LOGISTEED</p>
-            <p className="text-2xl w-[30rem] pl-40">
+          <div className="absolute font-bold text-black left-[20rem] md:left-[25rem] lg:left-[40rem] pt-10 top-32">
+            <p className="text-xl">Toward New Dimensions</p>
+            <p className="py-5 text-4xl">LOGISTEED</p>
+            <p className="text-xl">
               <span className="">LOGISTEED </span>is a word that combines Logistics with exceed. proceed, succeed and speed
             </p>
           </div>
         </div>
         <div>
           <img className="relative h-[30rem]" src={banner1} alt="" />
-          <div className="absolute pl-10 text-6xl font-bold text-white left-10 top-1/2">
+          <div className="absolute pl-10 font-bold text-white lg:text-6xl md:text-3xl left-10 top-1/2">
             <p>Global Network</p>
             <p>and Presence</p>
           </div>
         </div>
         <div>
           <img src={banner2} alt="" className="relative h-[30rem]" />
-          <div className="absolute pl-10 text-5xl font-bold text-black left-10 top-1/2">
+          <div className="absolute pl-10 font-bold text-black lg:text-5xl md:text-3xl left-10 top-1/2">
             <p>Integrated Logistics</p>
             <p>Solutions Partner</p>
           </div>
-        </div>
-
-        <div>
-          <img src={banner4} alt="" className="h-[30rem]" />
         </div>
       </Carousel>
 
