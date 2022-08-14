@@ -26,31 +26,58 @@ const Header: React.FC = () => {
   const solutions = [
     {
       name: 'Global Forwarding',
-      href: '/global-forwarding'
+      href: '/global-forwarding',
+      menus: ['Freight Management', 'Air Freight', 'Ocean Freight']
     },
     {
       name: 'Customs Clearance',
-      href: 'about'
+      href: 'about',
+      menus: [
+        'EXIM Export Import Solutions',
+        'Centralized Customs filing',
+        'Centre Of Exellence',
+        'Inland Haulage',
+        'DGFT Directoreate General Of Foreign Trade'
+      ]
     },
     {
       name: 'Project Logistics',
-      href: 'about'
+      href: 'about',
+      menus: ['Special Projects']
     },
     {
       name: 'Contract Warehousing',
-      href: 'about'
+      href: 'about',
+      menus: [
+        'Warehouse Management',
+        'Inplant Management',
+        'Value Added Services',
+        'FTWZ',
+        'Multipurpose Logistics Centres',
+        'BTS Built to Suit'
+      ]
     },
     {
       name: 'Transportation',
-      href: 'about'
+      href: 'about',
+      menus: ['Primary Transportation', 'Secondary Transportation', 'Reverse Logistics']
     },
     {
       name: 'Technology e-Carex 2.0',
-      href: 'about'
+      href: 'about',
+      menus: [
+        'iFreight Freight Management System',
+        'iCS Customs Solutions',
+        'iWS Warehouse Management System',
+        'iTrans Transport Management System',
+        'iCT Control Tower',
+        'RPA Robotic Process Automation'
+      ]
     },
     {
       name: 'Logistics Engineering',
-      href: 'about'
+      href: 'about',
+      menus: ['Solution Design', 'iBuisiness Excellence', 'Project Implementation', 'HSSE']
     }
   ];
 
@@ -144,7 +171,7 @@ const Header: React.FC = () => {
     return classes.filter(Boolean).join(' ');
   }
 
-  const [openSubmenu, setSubmenuState] = useState<boolean>(false);
+  const [hoveredIndex, setSubmenuIndex] = useState<number>();
 
   // setSubmenuState(openSubmenu => !openSubmenu);
 
@@ -200,13 +227,13 @@ const Header: React.FC = () => {
                           static
                           className="absolute z-10 w-[16rem] max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                         >
-                          <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                             <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-                              {solutions.map(item => (
-                                <button
+                              {solutions.map((item, index) => (
+                                <div
                                   key={item.name}
                                   className="relative flex items-start rounded-lg hover:text-[#4AAF70] group"
-                                  onMouseEnter={() => setSubmenuState(true)}
+                                  onMouseEnter={() => setSubmenuIndex(index)}
                                 >
                                   <div className="basis-48">
                                     <p className="text-base font-medium text-gray-600 hover:text-[#4AAF70]">{item.name}</p>
@@ -215,17 +242,32 @@ const Header: React.FC = () => {
                                     className={classNames('-mr-20 h-5 w-5 group-hover:text-[#4AAF70] text-gray-600')}
                                     aria-hidden="true"
                                   />
-                                  <Transition>
-                                    <Popover.Panel
-                                      static
-                                      className="absolute block z-20 w-[16rem]  px-20 mt-3 ml-[12rem] transform sm:px-0 lg:left-1/2 lg:-translate-x-1/2"
-                                    >
-                                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                        <div className="grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">amruta</div>
-                                      </div>
-                                    </Popover.Panel>
-                                  </Transition>
-                                </button>
+                                  {index === hoveredIndex && (
+                                    <Transition>
+                                      <Popover.Panel
+                                        static
+                                        className=" absolute block z-20 w-[16rem] px-20 sm:px-0 translate-x-[5rem] -translate-y-2"
+                                      >
+                                        <div className="ml-2 overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                          <div className="grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
+                                            {item.menus?.map(menu => (
+                                              <div
+                                                key={menu}
+                                                className="relative flex items-start rounded-lg hover:text-[#4AAF70] group"
+                                              >
+                                                <div className="basis-48">
+                                                  <p className="text-base font-medium text-gray-600 hover:text-[#4AAF70]">
+                                                    {menu}
+                                                  </p>
+                                                </div>
+                                              </div>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      </Popover.Panel>
+                                    </Transition>
+                                  )}
+                                </div>
                               ))}
                             </div>
                           </div>
@@ -352,7 +394,7 @@ const Header: React.FC = () => {
               <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
                 <button
                   type="button"
-                  className="inline-flex items-center px-4 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-white bg-[#ed7e00] hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="inline-flex items-center px-4 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-white bg-[#ed7e00]  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Search
                   <SearchIcon className="ml-2 -mr-0.5 h-4 w-4" aria-hidden="true" />

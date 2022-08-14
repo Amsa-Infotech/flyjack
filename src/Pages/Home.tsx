@@ -223,8 +223,19 @@ const home = () => {
 
         <div className="grid grid-cols-5 max-w-[80rem] mx-auto py-20">
           <div className="col-span-2">
-            <div className="bg-[#ec701d]">
-              <div></div>
+            <div className="bg-[#ec701d] relative text-center text-white top-1/3 z-10">
+              <div className="py-8">
+                <div className="py-2 text-2xl">
+                  <span className="uppercase">
+                    CSR <span className="font-bold">AND Sustainability</span>
+                  </span>
+                </div>
+                <div className="">
+                  <span className="text-sm font-bold">Social Welfare in Collaboration with Warrier Foundation</span>
+                  <p className="text-xs">This thought epitomises our purpose to help those less fortunate to</p>
+                  <p className="text-xs">face the world and live their life meaningfully.</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-span-3">
