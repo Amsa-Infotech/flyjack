@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      'sans': ['Helvetica']
+      sans: ['Helvetica Neue UltraLight'],
+      'body': ['Poppins']
     },
     extend: {},
     screens: {

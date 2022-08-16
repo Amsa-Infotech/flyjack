@@ -59,33 +59,34 @@ const home = () => {
         }}
       >
         <div>
-          <img src={banner4} alt="" className="relative h-[30rem]" />
-          <div className="absolute pl-20 text-white top-[18rem]">
+          <img src={banner3} className="lg:h-[46rem] md:h-[30rem]" alt="" />
+          <div className="absolute font-bold text-black left-[20rem] lg:left-[45rem] md:left-[40rem] pt-10 top-32 lg:top-[10rem] md:top-[5rem] sm:top-[2rem] xs:top-[1rem]">
+            <p className="text-xl lg:text-3xl">Toward New Dimensions</p>
+            <p className="py-5 text-4xl lg:text-5xl">LOGISTEED</p>
+            <p className="text-xl lg:w-52 md:w-40">
+              <span className="">LOGISTEED </span>is a word that combines Logistics with exceed. proceed, succeed and speed
+            </p>
+          </div>
+        </div>
+        <div>
+          <img src={banner4} alt="" className="relative md:h-[30rem] lg:h-[46rem]" />
+          <div className="absolute pl-20 text-white top-[18rem] lg:top-[25em] lg:text-xl sm:top-[12rem] md:top-[20rem]">
             <p>Amid various technological breakthroughs and an increasing diversification </p>
             <p> of services, procedures, and values in society, Hitachi Transport System and</p>
             <p>FLYJAC will attempt to expand our collaborative efforts across businesses </p>
             <p>and industries to achieve new innovations.</p>
           </div>
         </div>
+
         <div>
-          <img src={banner3} className="h-[30rem] " alt="" />
-          <div className="absolute font-bold text-black left-[20rem] md:left-[25rem] lg:left-[40rem] pt-10 top-32">
-            <p className="text-xl">Toward New Dimensions</p>
-            <p className="py-5 text-4xl">LOGISTEED</p>
-            <p className="text-xl">
-              <span className="">LOGISTEED </span>is a word that combines Logistics with exceed. proceed, succeed and speed
-            </p>
-          </div>
-        </div>
-        <div>
-          <img className="relative h-[30rem]" src={banner1} alt="" />
+          <img className="relative lg:h-[46rem] md:h-[30rem]" src={banner1} alt="" />
           <div className="absolute pl-10 font-bold text-white lg:text-6xl md:text-3xl left-10 top-1/2">
             <p>Global Network</p>
             <p>and Presence</p>
           </div>
         </div>
         <div>
-          <img src={banner2} alt="" className="relative h-[30rem]" />
+          <img src={banner2} alt="" className="relative lg:h-[46rem] md:h-[30rem]" />
           <div className="absolute pl-10 font-bold text-black lg:text-5xl md:text-3xl left-10 top-1/2">
             <p>Integrated Logistics</p>
             <p>Solutions Partner</p>
@@ -93,12 +94,14 @@ const home = () => {
         </div>
       </Carousel>
 
-      <div className="relative max-w-[50rem] mx-auto items-center pt-10">
-        <img src={logo} alt="" />
+      <div className="relative max-w-[45rem] mx-auto pt-32 pl-16">
+        <img src={logo} className="max-w-[80%]" alt="" />
       </div>
-      <div className="p-10 text-2xl max-w-[70rem] text-center mx-auto pb-20">
+      <div className="p-10 text-2xl max-w-[70rem] text-center mx-auto pb-20 font-sans">
         <p>A Group Company of Hitachi Transport Syste Japan, Flyjac is a Glocal Brand in</p>
-        <p>the supply Chain Industry, with 30+ years of experience in India. Founded in 1990.</p>
+        <p>
+          the supply Chain Industry, with <span className="font-bold">30+ years </span> of experience in India. Founded in 1990.
+        </p>
       </div>
       <section className=" bg-[#4AAF70] h-[21rem] py-16">
         <div className="grid grid-cols-3 text-center">

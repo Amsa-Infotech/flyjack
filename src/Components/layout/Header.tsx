@@ -20,9 +20,91 @@ import {
   XIcon
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Header: React.FC = () => {
+const Header = () => {
+  const navigate = useNavigate();
+  const headerMenus = [
+    {
+      name: 'Soutions',
+      menus: [
+        {
+          name: 'Global Forwarding',
+          href: '/global-forwarding',
+          menus: ['Freight Management', 'Air Freight', 'Ocean Freight']
+        },
+        {
+          name: 'Customs Clearance',
+          href: 'about',
+          menus: [
+            'EXIM Export Import Solutions',
+            'Centralized Customs filing',
+            'Centre Of Exellence',
+            'Inland Haulage',
+            'DGFT Directoreate General Of Foreign Trade'
+          ]
+        },
+        {
+          name: 'Project Logistics',
+          href: 'about',
+          menus: ['Special Projects']
+        },
+        {
+          name: 'Contract Warehousing',
+          href: 'about',
+          menus: [
+            'Warehouse Management',
+            'Inplant Management',
+            'Value Added Services',
+            'FTWZ',
+            'Multipurpose Logistics Centres',
+            'BTS Built to Suit'
+          ]
+        },
+        {
+          name: 'Transportation',
+          href: 'about',
+          menus: ['Primary Transportation', 'Secondary Transportation', 'Reverse Logistics']
+        },
+        {
+          name: 'Technology e-Carex 2.0',
+          href: 'about',
+          menus: [
+            'iFreight Freight Management System',
+            'iCS Customs Solutions',
+            'iWS Warehouse Management System',
+            'iTrans Transport Management System',
+            'iCT Control Tower',
+            'RPA Robotic Process Automation'
+          ]
+        },
+        {
+          name: 'Logistics Engineering',
+          href: 'about',
+          menus: ['Solution Design', 'iBuisiness Excellence', 'Project Implementation', 'HSSE']
+        }
+      ]
+    },
+    {
+      name: 'Industry',
+      menus: []
+    },
+    {
+      name: 'About Us',
+      menus: []
+    },
+    {
+      name: 'Careers',
+      menus: [],
+      path: null
+    },
+    {
+      name: 'Contact',
+      menus: [],
+
+      path: null
+    }
+  ];
   const solutions = [
     {
       name: 'Global Forwarding',
@@ -31,7 +113,7 @@ const Header: React.FC = () => {
     },
     {
       name: 'Customs Clearance',
-      href: 'about',
+      href: '#',
       menus: [
         'EXIM Export Import Solutions',
         'Centralized Customs filing',
@@ -42,12 +124,12 @@ const Header: React.FC = () => {
     },
     {
       name: 'Project Logistics',
-      href: 'about',
+      href: '#',
       menus: ['Special Projects']
     },
     {
       name: 'Contract Warehousing',
-      href: 'about',
+      href: '#',
       menus: [
         'Warehouse Management',
         'Inplant Management',
@@ -59,12 +141,12 @@ const Header: React.FC = () => {
     },
     {
       name: 'Transportation',
-      href: 'about',
+      href: '#',
       menus: ['Primary Transportation', 'Secondary Transportation', 'Reverse Logistics']
     },
     {
       name: 'Technology e-Carex 2.0',
-      href: 'about',
+      href: '#',
       menus: [
         'iFreight Freight Management System',
         'iCS Customs Solutions',
@@ -76,7 +158,7 @@ const Header: React.FC = () => {
     },
     {
       name: 'Logistics Engineering',
-      href: 'about',
+      href: '#',
       menus: ['Solution Design', 'iBuisiness Excellence', 'Project Implementation', 'HSSE']
     }
   ];
@@ -122,27 +204,27 @@ const Header: React.FC = () => {
   const aboutUs = [
     {
       name: 'Who We Are',
-      href: '#'
+      href: 'about'
     },
     {
       name: 'Philosophy & Mission',
-      href: '#'
+      href: 'about'
     },
     {
       name: 'Leadership Team',
-      href: '#'
+      href: 'about'
     },
     {
       name: 'Media & News',
-      href: '#'
+      href: 'about'
     },
     {
       name: 'Awards & Accredetions',
-      href: '#'
+      href: 'about'
     },
     {
       name: 'CSR',
-      href: '#'
+      href: 'about'
     }
   ];
   const resources = [
@@ -172,15 +254,13 @@ const Header: React.FC = () => {
   }
 
   const [hoveredIndex, setSubmenuIndex] = useState<number>();
+  const [selectedIndex, showSubMenus] = useState<number>(0);
 
-  // setSubmenuState(openSubmenu => !openSubmenu);
-
-  // export default function Header() {
   return (
     <Popover className="relative bg-white">
       {({ open }) => (
         <>
-          <div className="px-4 mx-auto max-w-7xl sm:px-6">
+          <div className="z-10 px-4 mx-auto max-w-7xl sm:px-6">
             <div className="flex items-center justify-between py-6 border-b-2 border-gray-100 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <a href="/">
@@ -200,7 +280,7 @@ const Header: React.FC = () => {
                       <Popover.Button
                         className={classNames(
                           open ? 'text-[#4AAF70]' : 'text-gray-500',
-                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-[#4AAF70] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-[#4AAF70] focus:outline-none'
                         )}
                       >
                         <span>Solutions</span>
@@ -232,7 +312,7 @@ const Header: React.FC = () => {
                               {solutions.map((item, index) => (
                                 <div
                                   key={item.name}
-                                  className="relative flex items-start rounded-lg hover:text-[#4AAF70] group"
+                                  className="relative cursor-pointer flex items-start rounded-lg hover:text-[#4AAF70] group"
                                   onMouseEnter={() => setSubmenuIndex(index)}
                                 >
                                   <div className="basis-48">
@@ -253,7 +333,9 @@ const Header: React.FC = () => {
                                             {item.menus?.map(menu => (
                                               <div
                                                 key={menu}
-                                                className="relative flex items-start rounded-lg hover:text-[#4AAF70] group"
+                                                className="relative flex items-start rounded-lg hover:text-[#4AAF70] group
+                                                "
+                                                onClick={() => navigate(item.href)}
                                               >
                                                 <div className="basis-48">
                                                   <p className="text-base font-medium text-gray-600 hover:text-[#4AAF70]">
@@ -283,7 +365,7 @@ const Header: React.FC = () => {
                       <Popover.Button
                         className={classNames(
                           open ? 'text-[#4AAF70]' : 'text-gray-500',
-                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none '
                         )}
                       >
                         <span>Industry</span>
@@ -336,7 +418,7 @@ const Header: React.FC = () => {
                       <Popover.Button
                         className={classNames(
                           open ? 'text-gray-900' : 'text-gray-500',
-                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none '
                         )}
                       >
                         <span>About Us</span>
@@ -408,6 +490,8 @@ const Header: React.FC = () => {
             </div>
           </div>
 
+          {/* for small screen */}
+
           <Transition
             show={open}
             as={Fragment}
@@ -418,16 +502,16 @@ const Header: React.FC = () => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Popover.Panel focus static className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden">
+            <Popover.Panel
+              focus
+              static
+              className="absolute inset-x-0 top-0 z-20 p-2 transition origin-top-right transform md:hidden"
+            >
               <div className="bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
                 <div className="px-5 pt-5 pb-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <img
-                        className="w-auto h-8"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                        alt="Workflow"
-                      />
+                      <img className="w-auto h-8" src={logo} alt="Workflow" />
                     </div>
                     <div className="-mr-2">
                       <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -437,44 +521,43 @@ const Header: React.FC = () => {
                     </div>
                   </div>
                   <div className="mt-6">
-                    <nav className="grid gap-y-8">
-                      {solutions.map(item => (
-                        <a key={item.name} href={item.href} className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
-                          {/* <item.icon className="flex-shrink-0 w-6 h-6 text-indigo-600" aria-hidden="true" /> */}
-                          <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                        </a>
+                    <nav className="grid mb-2 gap-y-8">
+                      {headerMenus.map((item, index) => (
+                        <div>
+                          <button
+                            key={item.name}
+                            className="flex items-center p-3 -m-3 rounded-md"
+                            onClick={() => showSubMenus(index)}
+                          >
+                            <span className="ml-3 text-base font-medium text-gray-900 hover:text-[#4AAF70]">{item.name}</span>
+                          </button>
+                          {index === selectedIndex && (
+                            <div className="px-5 py-6 space-y-6 border-t-2 ">
+                              <div className="">
+                                <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+                                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                    Pricing
+                                  </a>
+
+                                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                    Docs
+                                  </a>
+                                  {resources.map(item => (
+                                    <a
+                                      key={item.name}
+                                      href={item.href}
+                                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                                    >
+                                      {item.name}
+                                    </a>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </nav>
-                  </div>
-                </div>
-                <div className="px-5 py-6 space-y-6">
-                  <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Pricing
-                    </a>
-
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Docs
-                    </a>
-                    {resources.map(item => (
-                      <a key={item.name} href={item.href} className="text-base font-medium text-gray-900 hover:text-gray-700">
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                  <div>
-                    <a
-                      href="#"
-                      className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
-                    >
-                      Sign up
-                    </a>
-                    <p className="mt-6 text-base font-medium text-center text-gray-500">
-                      Existing customer?{' '}
-                      <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                        Sign in
-                      </a>
-                    </p>
                   </div>
                 </div>
               </div>
