@@ -59,37 +59,37 @@ const home = () => {
         }}
       >
         <div>
-          <img src={banner3} className="lg:h-[46rem] md:h-[30rem]" alt="" />
-          <div className="absolute font-bold text-black left-[20rem] lg:left-[45rem] md:left-[40rem] pt-10 top-32 lg:top-[10rem] md:top-[5rem] sm:top-[2rem] xs:top-[1rem]">
-            <p className="text-xl lg:text-3xl">Toward New Dimensions</p>
-            <p className="py-5 text-4xl lg:text-5xl">LOGISTEED</p>
-            <p className="text-xl lg:w-52 md:w-40">
-              <span className="">LOGISTEED </span>is a word that combines Logistics with exceed. proceed, succeed and speed
-            </p>
-          </div>
-        </div>
-        <div>
-          <img src={banner4} alt="" className="relative md:h-[30rem] lg:h-[46rem]" />
-          <div className="absolute pl-20 text-white top-[18rem] lg:top-[25em] lg:text-xl sm:top-[12rem] md:top-[20rem]">
-            <p>Amid various technological breakthroughs and an increasing diversification </p>
-            <p> of services, procedures, and values in society, Hitachi Transport System and</p>
-            <p>FLYJAC will attempt to expand our collaborative efforts across businesses </p>
-            <p>and industries to achieve new innovations.</p>
-          </div>
-        </div>
-
-        <div>
-          <img className="relative lg:h-[46rem] md:h-[30rem]" src={banner1} alt="" />
+          <img src={banner1} className="relative 2xl:h-[56rem] md:h-[30rem] lg:h-[34rem]" alt="" />
           <div className="absolute pl-10 font-bold text-white lg:text-6xl md:text-3xl left-10 top-1/2">
             <p>Global Network</p>
             <p>and Presence</p>
           </div>
         </div>
         <div>
-          <img src={banner2} alt="" className="relative lg:h-[46rem] md:h-[30rem]" />
+          <img src={banner2} alt="" className="relative 2xl:h-[56rem] md:h-[30rem] lg:h-[34rem]" />
           <div className="absolute pl-10 font-bold text-black lg:text-5xl md:text-3xl left-10 top-1/2">
             <p>Integrated Logistics</p>
             <p>Solutions Partner</p>
+          </div>
+        </div>
+        <div>
+          <img src={banner3} className="relative 2xl:h-[56rem] md:h-[30rem] lg:h-[34rem]" alt="" />
+          <div className="absolute font-bold text-black left-[20rem] right-0 lg:-right-[15rem] md:right-1 pt-10 top-32 2xl:top-[15rem] lg:top-[10rem] md:top-[5rem] sm:top-[2rem] xs:-top-[2rem] 2xl:-right-[25rem]">
+            <p className="text-xl sm:text-lg xs:text-base lg:text-3xl">Toward New Dimensions</p>
+            <p className="py-2 xs:py-0 md:py-5 xs:text-xs md:text-2xl lg:text-4xl 2xl:text-5xl 2xl:py-10">LOGISTEED</p>
+            <p className="text-sm 2xl:text-2xl lg:text-lg md:text-base xs:text-xs">LOGISTEED is a</p>
+            <p className="2xl:text-2xl lg:text-lg md:text-base xs:text-xs"> word that combines </p>
+            <p className="2xl:text-2xl lg:text-lg md:text-base xs:text-xs"> Logistics with exceed.</p>
+            <p className="2xl:text-2xl lg:text-lg md:text-base xs:text-xs"> Proceed, Succeed and Speed</p>
+          </div>
+        </div>
+        <div>
+          <img src={banner4} alt="" className="relative 2xl:h-[56rem] md:h-[30rem] lg:h-[34rem]" />
+          <div className="absolute pl-20 text-white top-[18rem] 2xl:top-[34rem] lg:top-[25rem] lg:text-xl sm:top-[12rem] md:top-[20rem]">
+            <p>Amid various technological breakthroughs and an increasing diversification </p>
+            <p> of services, procedures, and values in society, Hitachi Transport System and</p>
+            <p>FLYJAC will attempt to expand our collaborative efforts across businesses </p>
+            <p>and industries to achieve new innovations.</p>
           </div>
         </div>
       </Carousel>
