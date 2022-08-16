@@ -9,9 +9,9 @@ import image6 from '../../assets/images/gf-image6.png';
 const GlobalForwarding = () => {
   return (
     <div>
-      <img src={banner} className="w-full" alt="" />
-      <nav className="flex px-5 py-3 text-black border border-gray-200 bg-[#ececec] md:pl-[21.87rem]" aria-label="Breadcrumb">
-        <ol className="inline-flex items-center space-x-1 md:space-x-3">
+      <img src={banner} className="w-full " alt="" />
+      <nav className="flex py-3 text-black border border-gray-200 bg-[#ececec]  px-[10%]" aria-label="Breadcrumb">
+        <ol className="inline-flex items-center px-4 space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
             <a className="inline-flex items-center text-sm font-medium text-black hover:text-gray-900 ">
               <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -47,9 +47,9 @@ const GlobalForwarding = () => {
           </li>
         </ol>
       </nav>
-      <div className="relative max-w-[75rem] mx-auto p-4">
-        <div className="py-4 mt-12 max-w-[60rem] border-l-4 border-l-orange-600">
-          <p className="ml-4 text-5xl font-medium">
+      <div className="relative max-w-[80%] mx-auto p-4">
+        <div className="py-4 mt-12 2xl:max-w-[75rem] border-l-4 border-l-orange-600 pl-5">
+          <p className="ml-4 text-4xl font-bold font-['Poppins']">
             With more than 30 Years of experience in the Global freight forwarding field, we secure your logistics need in cross
             border transportation at the shortest lead time possible, leveraging the Hitachi Transport System Group offices (HTS)
             & our exclusive partner network.
@@ -177,7 +177,7 @@ const GlobalForwarding = () => {
         </div>
       </section>
       {/* other solutions section */}
-      <section id="other-solution" className="mx-auto bg-white max-w-[75rem]">
+      <section id="other-solution" className="mx-auto bg-white max-w-[80%]">
         <div className="text-center">
           <div className="py-12 text-4xl text-[#4AAF70] uppercase">
             Other <span className="font-bold">Solutions</span>

@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Helvetica Neue UltraLight'],
-      'body': ['Poppins']
+      'body': ['"Poppins"']
     },
     extend: {},
     screens: {
