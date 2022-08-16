@@ -68,44 +68,44 @@ const GlobalForwarding = () => {
             capabilities, strong customer focus, delivers the most effective & efficient shipping option available.
           </p>
         </div>
-        <img src={image1} alt="" />
+        <img src={image1} className="w-full" alt="" />
 
         {/* Freight Types */}
         <div className="mt-10">
           {/* Air Freight */}
-          <div className="grid grid-cols-2 py-12">
-            <div className="py-20">
-              <div className="text-2xl">
-                <span>Air</span> <span className="font-bold">Freight</span>
+          <div className="grid grid-cols-2 gap-20 ">
+            <div className="px-6 lg:py-6">
+              <div className="text-2xl font-['Poppins'] ">
+                <span>Air</span> <span className="font-bold ">Freight</span>
               </div>
-              <div className="max-w-[30rem] leading-loose">
-                <p className="mt-12">
+              <div className="max-w-[30rem] lg:leading-normal leading-loose 2xl:text-xl lg:font-md">
+                <p className="mt-5">
                   Our presence in all major airport/gateways enables the best optimized solutions for on time pick up/deliveries
                   at any part of the globe. Our large scale of operation and strong carrier relationship enable us in securing
                   competitive price & space.
                 </p>
-                <p className="mt-8">
+                <p className="mt-5">
                   We offer a wide range of Import & Export consolidation services, solution for Door to Door movements,
                   Temperature control cargo, DG Cargo, ODC, Flight Chartering & Domestic Air freight.
                 </p>
-                <p className="mt-8">
+                <p className="mt-5">
                   We provide seamless real-time visibility across, using our IT system with auto updates from airlines.
                 </p>
               </div>
             </div>
-            <img src={image2} alt="" />
+            <img src={image2} className="w-full" alt="" />
           </div>
+
           {/* Sea Freight */}
+          <div className="grid grid-cols-2 gap-20 pb-16 mt-16">
+            <img src={image3} className="w-full" alt="" />
 
-          <div className="grid grid-cols-2 py-12">
-            <img src={image3} alt="" />
-
-            <div className="p-20">
-              <div className="text-2xl">
+            <div className="lg:py-6">
+              <div className="text-2xl font-['Poppins'] ">
                 <span>Sea</span> <span className="font-bold">Freight</span>
               </div>
-              <div className="max-w-[30rem] leading-loose">
-                <p className="mt-12">
+              <div className="leading-loose  lg:leading-normal lg:w-full 2xl:text-xl xl:font-lg">
+                <p className="mt-5">
                   We provide flexible, dependable, and secure Ocean freight solutions with our strong and long-term carrier
                   partnerships across the Globe. We specialize in providing Direct and Multicountry consolidations services, FCL,
                   LCL Consolidations, Door to Door services, Reefer containers, Special Equipment's, ODC & Project cargo,
@@ -120,7 +120,7 @@ const GlobalForwarding = () => {
         </div>
       </div>
       {/* connect with us section */}
-      <section id="connect-us" className="py-24 mx-auto align-middle bg-gray-100">
+      <section id="connect-us" className="font-['Poppins'] py-24 mx-auto align-middle bg-gray-100">
         <div className="text-center">
           <div className="pb-16 text-4xl text-[#4AAF70] uppercase">
             Connect <span className="font-bold">With Us</span>
@@ -177,7 +177,7 @@ const GlobalForwarding = () => {
         </div>
       </section>
       {/* other solutions section */}
-      <section id="other-solution" className="mx-auto bg-white max-w-[80%]">
+      <section id="other-solution" className="font-['Poppins']  mx-auto bg-white max-w-[80%]">
         <div className="text-center">
           <div className="py-12 text-4xl text-[#4AAF70] uppercase">
             Other <span className="font-bold">Solutions</span>
