@@ -10,7 +10,7 @@ const GlobalForwarding = () => {
   return (
     <div>
       <img src={banner} className="w-full " alt="" />
-      <nav className="flex py-3 text-black border border-gray-200 bg-[#ececec]  px-[10%]" aria-label="Breadcrumb">
+      <nav className="flex py-3 text-black border border-gray-200 bg-[#ececec] px-[10%]" aria-label="Breadcrumb">
         <ol className="inline-flex items-center px-4 space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
             <a className="inline-flex items-center text-sm font-medium text-black hover:text-gray-900 ">
@@ -48,8 +48,8 @@ const GlobalForwarding = () => {
         </ol>
       </nav>
       <div className="relative max-w-[80%] mx-auto p-4">
-        <div className="py-4 mt-12 2xl:max-w-[75rem] border-l-4 border-l-orange-600 pl-5">
-          <p className="ml-4 text-4xl font-bold font-['Poppins']">
+        <div className="py-4 pl-5 mt-12 border-l-4 border-l-orange-600">
+          <p className="ml-4 text-4xl font-neue">
             With more than 30 Years of experience in the Global freight forwarding field, we secure your logistics need in cross
             border transportation at the shortest lead time possible, leveraging the Hitachi Transport System Group offices (HTS)
             & our exclusive partner network.
@@ -59,7 +59,7 @@ const GlobalForwarding = () => {
         {/* Freight Management */}
         <div className="p-5 mt-10">
           <div className="text-2xl">
-            <span>Freight</span> <span className="font-bold">Management</span>
+            <span>Freight</span> <span className="font-neue">Management</span>
           </div>
           <p className="mt-2 text-lg leading-8 ">
             We are a team of specialized industry professionals having ability to handle shipments end to end across the Globe,
@@ -75,10 +75,10 @@ const GlobalForwarding = () => {
           {/* Air Freight */}
           <div className="grid grid-cols-2 gap-20 ">
             <div className="px-6 lg:py-6">
-              <div className="text-2xl font-['Poppins'] ">
-                <span>Air</span> <span className="font-bold ">Freight</span>
+              <div className="text-2xl font-neue">
+                <span>Air</span> <span className="font-bold font-neue ">Freight</span>
               </div>
-              <div className="max-w-[30rem] lg:leading-normal leading-loose 2xl:text-xl lg:font-md">
+              <div className="max-w-[90%] lg:leading-normal leading-loose 2xl:text-xl lg:font-sm lg:tracking-tight">
                 <p className="mt-5">
                   Our presence in all major airport/gateways enables the best optimized solutions for on time pick up/deliveries
                   at any part of the globe. Our large scale of operation and strong carrier relationship enable us in securing
@@ -101,10 +101,10 @@ const GlobalForwarding = () => {
             <img src={image3} className="w-full" alt="" />
 
             <div className="lg:py-6">
-              <div className="text-2xl font-['Poppins'] ">
-                <span>Sea</span> <span className="font-bold">Freight</span>
+              <div className="text-2xl ">
+                <span className="font-light">Sea</span> <span className="font-neue">Freight</span>
               </div>
-              <div className="leading-loose  lg:leading-normal lg:w-full 2xl:text-xl xl:font-lg">
+              <div className="leading-loose lg:leading-normal lg:w-full 2xl:text-xl xl:font-lg lg:font-sm">
                 <p className="mt-5">
                   We provide flexible, dependable, and secure Ocean freight solutions with our strong and long-term carrier
                   partnerships across the Globe. We specialize in providing Direct and Multicountry consolidations services, FCL,
@@ -120,10 +120,10 @@ const GlobalForwarding = () => {
         </div>
       </div>
       {/* connect with us section */}
-      <section id="connect-us" className="font-['Poppins'] py-24 mx-auto align-middle bg-gray-100">
+      <section id="connect-us" className="py-24 mx-auto align-middle bg-gray-100 ">
         <div className="text-center">
           <div className="pb-16 text-4xl text-[#4AAF70] uppercase">
-            Connect <span className="font-bold">With Us</span>
+            Connect <span className="font-neue">With Us</span>
           </div>
           <div className="grid grid-cols-2 gap-6 pb-16">
             <div className="grid grid-cols-2 gap-6">
@@ -177,10 +177,10 @@ const GlobalForwarding = () => {
         </div>
       </section>
       {/* other solutions section */}
-      <section id="other-solution" className="font-['Poppins']  mx-auto bg-white max-w-[80%]">
+      <section id="other-solution" className=" mx-auto bg-white max-w-[80%]">
         <div className="text-center">
           <div className="py-12 text-4xl text-[#4AAF70] uppercase">
-            Other <span className="font-bold">Solutions</span>
+            Other <span className="font-neue">Solutions</span>
           </div>
           <div className="grid grid-cols-3 gap-6">
             <div className="">
