@@ -73,7 +73,7 @@ const GlobalForwarding = () => {
         {/* Freight Types */}
         <div className="mt-10">
           {/* Air Freight */}
-          <div className="grid grid-cols-2 gap-20 ">
+          <div className="grid grid-cols-2 gap-20 " id="sea-freight">
             <div className="px-6 lg:py-6">
               <div className="text-2xl font-neue">
                 <span>Air</span> <span className="font-bold font-neue ">Freight</span>
@@ -97,7 +97,7 @@ const GlobalForwarding = () => {
           </div>
 
           {/* Sea Freight */}
-          <div className="grid grid-cols-2 gap-20 pb-16 mt-16">
+          <div className="grid grid-cols-2 gap-20 pb-16 mt-16" id="sea-freight">
             <img src={image3} className="w-full" alt="" />
 
             <div className="lg:py-6">

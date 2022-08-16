@@ -5,8 +5,6 @@ import logo from '../../assets/logos/header_logo.png';
 import {
   BookmarkAltIcon,
   CalendarIcon,
-  ChartBarIcon,
-  ChevronLeftIcon,
   ChevronRightIcon,
   CursorClickIcon,
   MenuIcon,
