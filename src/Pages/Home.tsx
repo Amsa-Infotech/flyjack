@@ -103,29 +103,29 @@ const home = () => {
           the supply Chain Industry, with <span className="font-bold">30+ years </span> of experience in India. Founded in 1990.
         </p>
       </div>
-      <section className=" bg-[#4AAF70] h-[21rem] py-16">
-        <div className="grid grid-cols-3 text-center">
+      <section className=" bg-[#4AAF70] h-[21rem] py-16 padd-box">
+        <div className="grid grid-cols-3 text-center mg-2">
           <div className="py-5">
-            <img src={customer} className="w-10 mx-auto mb-3 scale-125" alt="" />
-            <span className="text-3xl text-white">5000+</span>
-            <p className="text-lg font-bold">Customers</p>
+            <img src={customer} className="w-icon mx-auto mb-3 scale-125" alt="" />
+            <span className="text-10xl text-white">5000+</span>
+            <p className="icon-text font-bold">Customers</p>
           </div>
           <div className="py-5 border-l-2 border-r-2">
-            <img src={ocean} className="w-10 mx-auto mb-3 scale-150" alt="" />
-            <span className="text-3xl text-white">1.2 million</span>
-            <p className="text-lg font-bold">Ocean Freight FCL (TEUs)</p>
-            <p className="text-lg font-bold">handled till Date</p>
+            <img src={ocean} className="w-sec mx-auto mb-3 scale-150" alt="" />
+            <span className="text-10xl text-white">1.2 million</span>
+            <p className="icon-text font-bold">Ocean Freight FCL (TEUs)</p>
+            <p className="icon-text font-bold">handled till Date</p>
           </div>
           <div className="py-5">
-            <img src={warehouse} className="w-10 mx-auto mb-3 scale-150" alt="" />
-            <span className="text-3xl text-white">4.5 million</span>
-            <p className="text-lg font-bold">SFT warehouse Management</p>
-            <p className="text-lg font-bold">Pan India</p>
+            <img src={warehouse} className="w-sec mx-auto mb-3 scale-150" alt="" />
+            <span className="text-10xl text-white">4.5 million</span>
+            <p className="icon-text font-bold">SFT warehouse Management</p>
+            <p className="icon-text font-bold">Pan India</p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white pad-17">
         <div className="text-[2rem] text-[#ed7e00] uppercase text-center font-sans">
           <span>
             Our <span className="font-bold">Solutions</span>
@@ -179,7 +179,7 @@ const home = () => {
         </div>
       </section>
 
-      <section className="pt-10 bg-white">
+      <section className="pt-10 bg-white pad-17">
         <div className="text-[2rem] text-[#ed7e00] uppercase text-center">
           <span>
             Industry <span className="font-bold">Expertise</span>
@@ -224,13 +224,13 @@ const home = () => {
           </div> */}
         </div>
 
-        <div className="grid grid-cols-5 max-w-[80rem] mx-auto py-20">
-          <div className="col-span-2">
-            <div className="bg-[#ec701d] relative text-center text-white top-1/3 z-10">
-              <div className="py-8">
+        <div className="grid grid-cols-6 max-w-[80rem] mx-auto py-20">
+          <div className="col-span-3">
+            <div className="bg-[#ec701d] relative text-white top-1/3 z-10">
+              <div className="py-4">
                 <div className="py-2 text-2xl">
                   <span className="uppercase">
-                    CSR <span className="font-bold">AND Sustainability</span>
+                    CSR <br/><span className="font-bold">AND Sustainability</span>
                   </span>
                 </div>
                 <div className="">
@@ -242,7 +242,7 @@ const home = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image7} alt="" />
+            <img className='mgl-10' src={image7} alt="" />
           </div>
         </div>
       </section>
