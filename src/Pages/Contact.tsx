@@ -188,7 +188,7 @@ const Contact = () => {
           </div>
         </section>
       </div>
-      {/* <img src={banner2} className="w-full" alt="" /> */}
+      <img src={banner2} className="w-full" alt="" />
     </div>
   );
 };
