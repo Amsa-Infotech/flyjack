@@ -45,8 +45,8 @@ const Contact = () => {
   return (
     <div>
       <img src={banner} className="w-full" alt="" />
-      <nav className="flex px-5 py-3 text-black border border-gray-200 bg-[#ececec] md:pl-[21.87rem]" aria-label="Breadcrumb">
-        <ol className="inline-flex items-center space-x-1 md:space-x-3">
+      <nav className="flex py-3 text-black border border-gray-200 bg-[#ececec] px-[10%]" aria-label="Breadcrumb">
+        <ol className="inline-flex items-center px-4 space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
             <a className="inline-flex items-center text-sm font-medium text-black hover:text-gray-900 ">
               <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ const Contact = () => {
           </li>
         </ol>
       </nav>
-      <div className="relative max-w-[90rem] mx-auto p-4">
+      <div className="relative  max-w-[80%] mx-auto p-4 pt-10">
         <div className="text-[2rem] text-[#ed7e00] uppercase text-center">
           <span>
             Office <span className="font-bold">Address</span>
@@ -116,78 +116,79 @@ const Contact = () => {
             </div>
           </div>
         </section>
-        {/* second section */}
-        <section className="mx-auto">
-          <div className="grid grid-cols-3">
+        {/* second addresses section */}
+        <section className="mx-auto max-w-[90%]">
+          <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 xs:grid-cols-1">
             {offices.map((item, index = 1) => (
               <div key={item.name} className="pb-20 uppercase">
                 <span className="text-[#4AAF70] font-bold">{item.name}</span>
-                <div className="flex">
-                  <div>
-                    {/* address */}
-                    <div className="flex mt-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-8 h-8"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="1"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      <span className="ml-2">{item.address}</span>
-                    </div>
-                    {/* email */}
-                    <div className="flex mt-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-6 h-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="1"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                        />
-                      </svg>
-                      <span className="ml-2">{item.email}</span>
-                    </div>
-                    {/* phone */}
-                    <div className="flex mt-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-6 h-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="1"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                      <span className="ml-2">{item.phone}</span>
-                    </div>
-                  </div>
-                  {(index + 1) % 3 !== 0 && <div className="w-1 mx-16 ml-6 bg-gray-300 h-30"></div>}
+                {/* <div
+                  className={
+                    [1, 4].includes(index) ? 'border-l-2 border-r-2 pl-8 border-gray-300' : [2, 5].includes(index) ? 'pl-8' : ''
+                  }
+                > */}
+                {/* address */}
+                <div className="flex mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-7 h-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span className="flex-initial ml-2">{item.address}</span>
+                </div>
+                {/* email */}
+                <div className="flex mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                    />
+                  </svg>
+                  <span className="flex-initial ml-2 break-words break-all">{item.email}</span>
+                </div>
+                {/* phone */}
+                <div className="flex mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  <span className="ml-2 ">{item.phone}</span>
                 </div>
               </div>
+              // </div>
             ))}
           </div>
         </section>
       </div>
-      <img src={banner2} className="w-full" alt="" />
+      {/* <img src={banner2} className="w-full" alt="" /> */}
     </div>
   );
 };
