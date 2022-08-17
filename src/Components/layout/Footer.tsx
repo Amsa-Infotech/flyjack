@@ -2,7 +2,7 @@ import logo from '../../assets/images/logo.png';
 
 const navigation = {
   solutions: [
-    { name: 'Global Forwarding', href: '#' },
+    { name: 'Global Forwarding', href: '/global-forwarding' },
     { name: 'Customs Clearance', href: '#' },
     { name: 'Project Logistics', href: '#' },
     { name: 'Contract WarehousingC', href: '#' },
@@ -23,11 +23,11 @@ const navigation = {
     { name: 'Retail', href: '#' }
   ],
   aboutUs: [
-    { name: 'Mission & Vision', href: '#' },
-    { name: 'Leadership Team', href: '#' },
-    { name: 'Media and News', href: '#' },
-    { name: 'Awards', href: '#' },
-    { name: 'CSR', href: '#' }
+    { name: 'Mission & Vision', href: '/about' },
+    { name: 'Leadership Team', href: '/about' },
+    { name: 'Media and News', href: '/about' },
+    { name: 'Awards', href: '/about' },
+    { name: 'CSR', href: '/about' }
   ],
 
   social: [
@@ -105,7 +105,7 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+      <div className="px-4 py-12 mx-auto  max-w-[80%] sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <img src={logo} alt="Company name" />
@@ -160,7 +160,9 @@ export default function Footer() {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">Career</h3>
-                <h3 className="mt-6 mb-6 text-sm font-semibold tracking-wider text-gray-400 uppercase">Contact</h3>
+                <h3 className="mt-6 mb-6 text-sm font-semibold tracking-wider text-gray-400 uppercase">
+                  <a href="/contact">Contact</a>
+                </h3>
                 <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">Call Us</h3>
                 <h5 className="text-sm tracking-wider text-gray-400">0091 22 30904800</h5>
                 <h3 className="mt-6 mb-4 text-sm font-semibold tracking-wider text-gray-400 uppercase">Follow Us</h3>

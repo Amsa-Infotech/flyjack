@@ -67,12 +67,12 @@ const AboutUs = () => {
       </div>
 
       {/* mission section*/}
-      <section id="mission" className="mx-auto bg-[#4AAF70]">
-        <div className="text-center">
+      <section id="mission" className="mx-auto bg-[#4AAF70] w-full">
+        <div className="text-center max-w-[70%] mx-auto">
           <div className="py-12 text-4xl text-white uppercase">
             Our <span className="font-neue">Mission</span>
           </div>
-          <p className="text-3xl text-white px-[28rem]">
+          <p className="text-3xl text-white">
             We help you enhance your business processes, streamline your operations and improve your bottom-line. We also create
             opportunities for self-development and excellence, while working towards empowering and enrolling towards social and
             spiritual development. Our mission also includes building care and competence in networking, communication and
